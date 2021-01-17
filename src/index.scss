@@ -1,0 +1,146 @@
+// set default styles
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// app styles
+$app-background: #000;
+$app-main-color: #fff;
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: local('Montserrat-Medium'), url(./assets/fonts/Montserrat-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: local('Montserrat-Regular'), url(./assets/fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: local('Montserrat-Bold'), url(./assets/fonts/Montserrat-Bold.ttf) format('truetype');
+}
+
+body {
+  background-color: $app-background;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: $app-main-color solid 1px;
+
+    .header-text {
+      color: $app-main-color;
+      font-family: Montserrat-Bold, Montserrat-Medium, monospace;
+      font-size: 35px;
+    }
+  }
+
+  .game-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .grid {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: $app-background;
+      width: 500px;
+      height: 500px;
+      padding: 10px;
+
+      .cell-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $app-main-color;
+        width: 150px;
+        height: 150px;
+        margin: 3px;
+        font-size: 130px;
+        font-family: Montserrat-Bold, Montserrat-Medium, serif ;
+      }
+
+      .winning-combination-cell-item {
+        color: #dc143c;
+      }
+    }
+  }
+
+  .additional-text {
+    font-family: Montserrat-Medium, monospace;
+    color: $app-main-color;
+    font-size: 30px;
+    align-self: center;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
