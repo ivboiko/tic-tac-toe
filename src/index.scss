@@ -82,6 +82,26 @@ body {
   background-color: $app-background;
 }
 
+@mixin button($width, $height, $text-size, $border-radius, $background-color: $app-main-color) {
+  width: $width;
+  height: $height;
+  font-size: $text-size;
+  border-radius: $border-radius;
+  font-family: Montserrat-Bold, serif;
+  background-color: $background-color;
+}
+
+.start-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+
+  .start-button {
+    @include button(280px, 100px, 35px, 25px);
+  }
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -96,7 +116,12 @@ body {
     .header-text {
       color: $app-main-color;
       font-family: Montserrat-Bold, Montserrat-Medium, monospace;
-      font-size: 35px;
+      font-size: 40px;
+    }
+
+    .header-icon {
+      position: absolute;
+      left: 15px;
     }
   }
 
@@ -143,11 +168,6 @@ body {
   }
 
   .restart-button {
-    background-color: $app-main-color;
-    border-radius: 15px;
-    width: 170px;
-    height: 60px;
-    font-size: 20px;
-    font-family: Montserrat-Medium, serif;
+    @include button(170px, 60px, 20px, 15px);
   }
 }

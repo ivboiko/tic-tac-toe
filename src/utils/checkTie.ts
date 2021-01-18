@@ -1,4 +1,4 @@
-import {CellType} from "../types/types";
+import {CellType} from '../types/types';
 
 export const checkTie = (cells: Array<CellType>): boolean => {
   for (const cell of cells) {

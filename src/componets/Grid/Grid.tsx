@@ -1,10 +1,14 @@
-import React, {useState} from "react";
-import CellItem from "./CellItem";
-import {CellType, GameValueType, WinningCombinationType} from "../../types/types";
-import {checkIsWinnerExists} from "../../utils/checkWinner";
-import {checkTie} from "../../utils/checkTie";
+import React, {Dispatch, SetStateAction, useEffect, useState} from 'react';
+import CellItem from './CellItem';
+import {CellType, GameValueType, WinningCombinationType} from '../../types/types';
+import {checkIsWinnerExists} from '../../utils/checkWinner';
+import {checkTie} from '../../utils/checkTie';
 
-const Grid = () => {
+type GridType = {
+  setBackIconShown: Dispatch<SetStateAction<boolean>>;
+}
+
+const Grid: React.FC<GridType> = ({setBackIconShown}) => {
   const initialCellsState =
     Array(9).fill(null).map((_, index) => ({cellId: index, cellValue: null}))
 
@@ -14,6 +18,12 @@ const Grid = () => {
   const [winningCombination, setWinningCombination] = useState<WinningCombinationType>(undefined);
   const [isTie, setIsTie] = useState<boolean>(false);
 
+  useEffect(() => {
+    setBackIconShown(true);
+    
+    return () => setBackIconShown(false);
+  }, [setBackIconShown]);
+  
   const onCellClick = (changedCellItemId: number) => {
     const updatedCells = cells.map((cell): CellType => {
       if (cell.cellId === changedCellItemId && cell.cellValue === null) {
@@ -71,12 +81,12 @@ const Grid = () => {
       <div className="grid">
         {
           cells.map((item, index) => (
-            <CellItem
-              key={index.toString()}
-              onCellClick={onCellClick}
-              cellItem={item}
-              gameIsFinished={winningCombination !== undefined}
-              winningCombinationAdditionStyle={checkCellInWinningCombination(item.cellId)} />
+              <CellItem
+                key={index.toString()}
+                onCellClick={onCellClick}
+                cellItem={item}
+                gameIsFinished={winningCombination !== undefined}
+                winningCombinationAdditionStyle={checkCellInWinningCombination(item.cellId)}/>
             )
           )
         }

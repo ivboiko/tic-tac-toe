@@ -1,4 +1,4 @@
-import {CellType, WinningCombinationType} from "../types/types";
+import {CellType, WinningCombinationType} from '../types/types';
 
 const winningCombinations = [
   [0, 1, 2], [3, 4, 5], [6, 7, 8],

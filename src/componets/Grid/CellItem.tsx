@@ -1,5 +1,5 @@
 import React from 'react';
-import {CellType} from "../../types/types";
+import {CellType} from '../../types/types';
 
 type CellItemType = {
   onCellClick: (changedCellItemId: number) => void,
