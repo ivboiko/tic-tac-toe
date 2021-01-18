@@ -60,6 +60,14 @@ const Grid = () => {
 
   return (
     <div className='game-container'>
+      {
+        <div className='additional-text'>
+          {!isTie && gameCurrentValue.toUpperCase()}
+          {winningCombination && ', you\'re winner'}
+          {!winningCombination && !isTie && ', is your turn'}
+          {isTie && 'Tie'}!
+        </div>
+      }
       <div className="grid">
         {
           cells.map((item, index) => (
@@ -73,17 +81,9 @@ const Grid = () => {
           )
         }
       </div>
-      {
-        <div className='additional-text'>
-          {!isTie && gameCurrentValue.toUpperCase()}
-          {winningCombination && ', you\'re winner'}
-          {!winningCombination && !isTie && ', is your turn'}
-          {isTie && 'Tie'}!
-        </div>
-      }
       <div>
         {
-          (isTie || winningCombination) && <button onClick={restartGame}>Restart</button>
+          (isTie || winningCombination) && <button className='restart-button' onClick={restartGame}>Restart</button>
         }
       </div>
     </div>
