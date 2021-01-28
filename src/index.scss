@@ -123,3 +123,209 @@ body {
     @include button(170px, 60px, 20px, 15px);
   }
 }
+
+@media (max-width: 620px) {
+  .app-container {
+    .header {
+      height: 70px;
+
+      .header-text {
+        font-size: 30px;
+      }
+
+      .header-icon {
+        left: 12px;
+        height: 42px;
+        width: 42px;
+      }
+    }
+
+    .additional-text {
+      font-size: 25px;
+    }
+
+    .game-container {
+
+      .grid {
+        width: 450px;
+        height: 450px;
+        padding: 9px;
+
+        .cell-item {
+          width: 135px;
+          height: 135px;
+          margin: 3px;
+          font-size: 115px;
+        }
+      }
+    }
+
+    .restart-button {
+      @include button(180px, 65px, 21px, 16px);
+    }
+
+    .start-screen {
+      height: 200px;
+
+      .start-button {
+        @include button(200px, 72px, 24px, 18px);
+      }
+    }
+  }
+}
+
+@media (max-width: 530px) {
+  .app-container {
+
+    .header {
+      .header-icon {
+        left: 9px;
+        height: 35px;
+        width: 35px;
+      }
+    }
+
+    .game-container {
+
+      .grid {
+        width: 400px;
+        height: 400px;
+        padding: 8px;
+
+        .cell-item {
+          width: 120px;
+          height: 120px;
+          margin: 3px;
+          font-size: 100px;
+        }
+      }
+    }
+
+    .restart-button {
+      @include button(160px, 59px, 18px, 13px);
+    }
+  }
+}
+
+@media (max-width: 455px) {
+  .app-container {
+    .header {
+      .header-text {
+        font-size: 25px;
+      }
+
+      .header-icon {
+        left: 7px;
+        height: 28px;
+        width: 28px;
+      }
+    }
+
+    .game-container {
+      margin-top: 30px;
+
+      .grid {
+        width: 350px;
+        height: 350px;
+        padding: 7px;
+
+        .cell-item {
+          width: 105px;
+          height: 105px;
+          margin: 2px;
+          font-size: 85px;
+        }
+      }
+    }
+
+    .additional-text {
+      font-size: 20px;
+    }
+
+    .restart-button {
+      @include button(128px, 43px, 14px, 10px);
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .app-container {
+    .header {
+      height: 40px;
+
+      .header-text {
+        font-size: 20px;
+      }
+
+      .header-icon {
+        position: absolute;
+        left: 5px;
+        height: 25px;
+        width: 25px;
+      }
+    }
+
+    .additional-text {
+      font-size: 18px;
+    }
+
+    .game-container {
+      margin-top: 30px;
+
+      .grid {
+        width: 250px;
+        height: 250px;
+        padding: 6px;
+
+        .cell-item {
+          width: 75px;
+          height: 75px;
+          margin: 1.5px;
+          font-size: 55px;
+        }
+      }
+    }
+
+    .restart-button {
+      @include button(100px, 35px, 12px, 10px);
+    }
+
+    .start-screen {
+      height: 130px;
+
+      .start-button {
+        @include button(130px, 50px, 15px, 10px);
+      }
+    }
+  }
+}
+
+@media (max-width: 300px) {
+  .app-container {
+    .header {
+      height: 25px;
+
+      .header-text {
+        font-size: 10px;
+      }
+
+      .header-icon {
+        left: 3px;
+        height: 18px;
+        width: 18px;
+      }
+    }
+
+    .start-screen {
+      height: 70px;
+
+      .start-button {
+        @include button(80px, 30px, 9px, 6px);
+      }
+    }
+
+    .restart-button {
+      @include button(80px, 30px, 9px, 6px);
+    }
+  }
+}
