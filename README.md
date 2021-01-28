@@ -1,7 +1,7 @@
 # TIC TAC TOE
 
 ## App link
-[https://tic-tac-toe-azure.vercel.app/](https://tic-tac-toe-azure.vercel.app/)
+[https://tic-tac-toe-psi-pearl.vercel.app/](https://tic-tac-toe-psi-pearl.vercel.app/)
 
 ## Available Scripts
 
