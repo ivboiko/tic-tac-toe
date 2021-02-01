@@ -1,15 +1,14 @@
-// set default styles
+$app-background: #000;
+$app-main-color: #fff;
+
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   margin: 0;
+  background-color: $app-background;
 }
-
-// app styles
-$app-background: #000;
-$app-main-color: #fff;
 
 @font-face {
   font-family: 'Montserrat-Medium';
@@ -24,10 +23,6 @@ $app-main-color: #fff;
 @font-face {
   font-family: 'Montserrat-Bold';
   src: local('Montserrat-Bold'), url(./assets/fonts/Montserrat-Bold.ttf) format('truetype');
-}
-
-body {
-  background-color: $app-background;
 }
 
 @mixin button($width, $height, $text-size, $border-radius, $background-color: $app-main-color) {
