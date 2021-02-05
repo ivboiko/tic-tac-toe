@@ -56,7 +56,7 @@ body {
 
   .header {
     display: flex;
-    height: 100px;
+    height: 6em;
     justify-content: center;
     align-items: center;
     border-bottom: $app-main-color solid 1px;
@@ -64,17 +64,17 @@ body {
     .header-text {
       color: $app-main-color;
       font-family: Montserrat-Bold, Montserrat-Medium, monospace;
-      font-size: 40px;
+      font-size: 2.5em;
     }
 
     .header-icon {
       position: absolute;
-      left: 15px;
+      left: 1.5em;
     }
   }
 
   .game-container {
-    margin-top: 30px;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
